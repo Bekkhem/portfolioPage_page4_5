@@ -146,9 +146,11 @@
 }
 
 .text_note {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     margin-left: 30%;
-    margin-top: 15%;
+    margin-top: 20%;
+    margin-bottom: 5%;
     text-align: center;
     background-color: #ffffff;
     padding: 10px;
@@ -164,13 +166,16 @@
     text-align: center;
 }
 
+.text_note a:hover {
+    background-color: red;
+}
+
 .active {
     background-color: yellow;
 }
 
 .flex-container {
-    position: absolute;
-    margin-top: 22%;
+    position: relative;
     margin-left: 7%;
     display: flex;
     flex-wrap: wrap;
@@ -178,15 +183,74 @@
     height: auto;
 }
 
-.flex-container .flex-item {
+.flex-container>div {
     flex-grow: 1;
     width: 30%;
     height: auto;
-    text-align: center;
 }
 
 .flex-container .flex-item img {
     width: 91%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin: 3% 6% 3% 0;
+}
+
+@media only screen and (max-width: 768px) {
+    flex-container {
+        position: relative;
+        margin-left: 7%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: auto;
+    }
+    .text_note {
+        position: relative;
+        display: inline-block;
+        margin-left: 10%;
+        margin-top: 25%;
+        margin-bottom: 5%;
+        text-align: center;
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    .flex-container>div {
+        flex-grow: 1;
+        width: 43%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .flex-container {
+        display: inline-block;
+        width: 100%;
+        margin-left: 7%;
+        margin-top: 60%;
+    }
+    .sadow {
+        height: 600vh;
+    }
+    .text_note {
+        position: relative;
+        display: inline-block;
+        margin-left: 10%;
+        margin-top: 45%;
+        margin-bottom: 1%;
+        text-align: center;
+        background-color: #ffffff;
+        padding: 1px;
+    }
+    .text_note a {
+        font-size: 1em;
+        margin-left: 0%;
+    }
+    .flex-container .flex-item {
+        width: 100%;
+        margin-right: 5%;
+        flex-direction: column;
+    }
+    .flex-container {
+        margin-top: 5%;
+    }
 }
